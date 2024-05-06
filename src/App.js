@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+//import Footer from './component/Footer';
+//import HomeBrand from './component/HomeBrand';
+//import Navbar from './component/Navbar';
+//import AboutUs from './component/AboutUs';
+//import Products from './component/Products';
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import FormManager from './component/FormManager';
+import SinglePage from './component/SinglePage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    
+
+    <BrowserRouter>
+    
+    <Routes>
+      <Route path='/' element={<SinglePage/>}/>
+      <Route path='form' element={<FormManager/>}/>
+    </Routes>
+    </BrowserRouter>
+    </>
+    
   );
 }
 
